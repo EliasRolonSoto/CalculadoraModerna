@@ -6,7 +6,7 @@ namespace CalcWinform1
     {
         private ICalc _calc;
 
-        private Queue<Button> botones;
+        private Queue<Button> botones = new Queue<Button>();
 
         public Form1(ICalc calc)
         {
@@ -41,7 +41,6 @@ namespace CalcWinform1
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            Queue<Button> q = new Queue<Button>();
 
             for (int i = 0; i < 10; i++)
             {
@@ -53,9 +52,9 @@ namespace CalcWinform1
 
                 panelCalc.Controls.Add(b);
 
+                botones.Enqueue(b);
 
             }
-
             var bAdd = new Button();
             bAdd.Text = "+";
         }
@@ -80,6 +79,17 @@ namespace CalcWinform1
 
         private void panelCalc_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (botones.Count > 0)
+            {
+                Button btnRemover = botones.Dequeue();
+
+                panelCalc.Controls.Remove(btnRemover);
+            }
 
         }
     }

@@ -33,6 +33,7 @@
             Estado = new Label();
             btnGenerate = new Button();
             panelCalc = new Panel();
+            btnRemover = new Button();
             SuspendLayout();
             // 
             // button1
@@ -85,11 +86,22 @@
             panelCalc.TabIndex = 4;
             panelCalc.Paint += panelCalc_Paint;
             // 
+            // btnRemover
+            // 
+            btnRemover.Location = new Point(442, 51);
+            btnRemover.Name = "btnRemover";
+            btnRemover.Size = new Size(75, 23);
+            btnRemover.TabIndex = 5;
+            btnRemover.Text = "Remover";
+            btnRemover.UseVisualStyleBackColor = true;
+            btnRemover.Click += btnRemover_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(706, 631);
+            Controls.Add(btnRemover);
             Controls.Add(panelCalc);
             Controls.Add(btnGenerate);
             Controls.Add(Estado);
@@ -110,5 +122,6 @@
         private Label Estado;
         private Button btnGenerate;
         private Panel panelCalc;
+        private Button btnRemover;
     }
 }
