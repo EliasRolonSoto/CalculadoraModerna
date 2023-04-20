@@ -8,6 +8,9 @@ namespace CalcCore.Interfaces
 {
     public interface ICalc
     {
+        public EventHandler Procesando { get; set; }
+        public EventHandler Termino { get; set; }
+
         int Suma (int a, int b);
 
         int Resta(int a, int b);

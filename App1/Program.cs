@@ -1,5 +1,5 @@
 ﻿using CalcCore.Interfaces;
-using ClassLibraryCalculadoras;
+using CalcVieja;
 using CalcSuperpower;
 
 namespace App1
@@ -19,7 +19,7 @@ namespace App1
             m.PrintMult();
             m.PrintDiv();
 
-            m.SetCalc(new ClassLibraryCalculadoras.Calc());
+            m.SetCalc(new CalcVieja.Calc());
             m.PrintSuma();
             m.PrintResta();
             m.PrintMult();

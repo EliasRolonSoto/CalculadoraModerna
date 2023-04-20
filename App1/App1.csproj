@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CalcSuperpower\CalcSuperpower.csproj" />
-    <ProjectReference Include="..\ClassLibraryCalculadoras\ClassLibraryCalculadoras.csproj" />
+    <ProjectReference Include="..\ClassLibraryCalculadoras\CalcVieja.csproj" />
   </ItemGroup>
 
 </Project>

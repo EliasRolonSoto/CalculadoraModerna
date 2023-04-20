@@ -1,4 +1,4 @@
-﻿using ClassLibraryCalculadoras;
+﻿using CalcVieja;
 
 namespace App2
 {
