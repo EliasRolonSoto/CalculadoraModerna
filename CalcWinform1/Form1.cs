@@ -43,22 +43,22 @@ namespace CalcWinform1
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < 10; i++)
+            if (botones.Count == 0)
             {
+                for (int i = 0; i < 10; i++)
+                {
 
-                var b = new Button();
-                b.Text = i.ToString();
+                    var b = new Button();
+                    b.Text = i.ToString();
 
-                b.Location = new Point(i, i * 40);
+                    b.Location = new Point(i, i * 40);
 
-                panelCalc.Controls.Add(b);
+                    panelCalc.Controls.Add(b);
 
-                botones.Enqueue(b);
+                    botones.Enqueue(b);
 
+                }
             }
-
-
 
         }
 
@@ -108,31 +108,35 @@ namespace CalcWinform1
 
         private void btnGenOp_Click(object sender, EventArgs e)
         {
-            var bSuma = new Button();
-            bSuma.Text = "+";
-            bSuma.Location = new Point(80, 60);
-            panelCalc.Controls.Add(bSuma);
+            if (op.Count == 0)
+            {
+                var bSuma = new Button();
+                bSuma.Text = "+";
+                bSuma.Location = new Point(80, 60);
+                panelCalc.Controls.Add(bSuma);
 
-            var bResta = new Button();
-            bResta.Text = "-";
-            bResta.Location = new Point(80, 40);
-            panelCalc.Controls.Add(bResta);
+                var bResta = new Button();
+                bResta.Text = "-";
+                bResta.Location = new Point(80, 40);
+                panelCalc.Controls.Add(bResta);
 
-            var bMulti = new Button();
-            bMulti.Text = "*";
-            bMulti.Location = new Point(80, 20);
-            panelCalc.Controls.Add(bMulti);
+                var bMulti = new Button();
+                bMulti.Text = "*";
+                bMulti.Location = new Point(80, 20);
+                panelCalc.Controls.Add(bMulti);
 
-            var bDiv = new Button();
-            bDiv.Text = "/";
-            bDiv.Location = new Point(80, 0);
-            panelCalc.Controls.Add(bDiv);
+                var bDiv = new Button();
+                bDiv.Text = "/";
+                bDiv.Location = new Point(80, 0);
+                panelCalc.Controls.Add(bDiv);
 
 
-            op.Enqueue(bSuma);
-            op.Enqueue(bResta);
-            op.Enqueue(bMulti);
-            op.Enqueue(bDiv);
+                op.Enqueue(bSuma);
+                op.Enqueue(bResta);
+                op.Enqueue(bMulti);
+                op.Enqueue(bDiv);
+            }
+
 
         }
 
