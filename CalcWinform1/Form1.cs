@@ -59,7 +59,7 @@ namespace CalcWinform1
             }
 
 
-            
+
         }
 
 
@@ -132,6 +132,27 @@ namespace CalcWinform1
             op.Enqueue(bResta);
             op.Enqueue(bMulti);
             op.Enqueue(bDiv);
+        }
+
+        private void bSuma_Click(object sender, EventArgs e)
+        {
+            var resultado = _calc.Suma(8, 4);
+            label1.Text = resultado.ToString();
+        }
+        private void bResta_Click(object sender, EventArgs e)
+        {
+            var resultado = _calc.Resta(8, 4);
+            label1.Text = resultado.ToString();
+        }
+        private void bMulti_Click(object sender, EventArgs e)
+        {
+            var resultado = _calc.Mult(8, 4);
+            label1.Text = resultado.ToString();
+        }
+        private void bDiv_Click(object sender, EventArgs e)
+        {
+            var resultado = _calc.Suma(8, 4);
+            label1.Text = resultado.ToString();
         }
     }
 }
