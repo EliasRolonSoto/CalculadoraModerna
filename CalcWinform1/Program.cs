@@ -19,6 +19,7 @@ namespace CalcWinform1
             var serviceCollection = new ServiceCollection();
 
             serviceCollection.AddScoped<ICalc, CalcVieja.Calc>()
+                             //.AddScoped<ICalc, CalcSuperpower.Class1>
                              .AddScoped<Form1>();
 
             using (var serviceProvider = serviceCollection.BuildServiceProvider()) 

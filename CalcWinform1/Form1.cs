@@ -48,15 +48,21 @@ namespace CalcWinform1
                 var b = new Button();
                 b.Text = i.ToString();
 
-                b.Location = new Point(i * 40, i * 40);
+                b.Location = new Point(i, i * 40);
 
                 panelCalc.Controls.Add(b);
 
                 botones.Enqueue(b);
 
             }
-            var bAdd = new Button();
-            bAdd.Text = "+";
+            var bSuma = new Button();
+            bSuma.Text = "+";
+            var bResta = new Button();
+            bResta.Text = "-";
+            var bMulti = new Button();
+            bMulti.Text = "*";
+            var bDiv = new Button();
+            bDiv.Text = "/";
         }
 
 

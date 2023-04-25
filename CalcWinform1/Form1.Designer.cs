@@ -38,9 +38,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(34, 42);
+            button1.Location = new Point(39, 56);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 31);
             button1.TabIndex = 0;
             button1.Text = "Suma";
             button1.UseVisualStyleBackColor = true;
@@ -49,9 +50,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(34, 81);
+            label1.Location = new Point(39, 108);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(50, 20);
             label1.TabIndex = 1;
             label1.Text = "label1";
             // 
@@ -59,18 +60,19 @@
             // 
             Estado.AutoSize = true;
             Estado.Dock = DockStyle.Bottom;
-            Estado.Location = new Point(0, 616);
+            Estado.Location = new Point(0, 643);
             Estado.Name = "Estado";
-            Estado.Size = new Size(38, 15);
+            Estado.Size = new Size(50, 20);
             Estado.TabIndex = 2;
             Estado.Text = "label2";
             Estado.Click += label2_Click;
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(252, 51);
+            btnGenerate.Location = new Point(288, 68);
+            btnGenerate.Margin = new Padding(3, 4, 3, 4);
             btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(75, 23);
+            btnGenerate.Size = new Size(86, 31);
             btnGenerate.TabIndex = 3;
             btnGenerate.Text = "Generar";
             btnGenerate.UseVisualStyleBackColor = true;
@@ -80,17 +82,19 @@
             // 
             panelCalc.AutoSize = true;
             panelCalc.BackColor = SystemColors.ActiveCaption;
-            panelCalc.Location = new Point(59, 110);
+            panelCalc.Location = new Point(67, 147);
+            panelCalc.Margin = new Padding(3, 4, 3, 4);
             panelCalc.Name = "panelCalc";
-            panelCalc.Size = new Size(577, 456);
+            panelCalc.Size = new Size(641, 472);
             panelCalc.TabIndex = 4;
             panelCalc.Paint += panelCalc_Paint;
             // 
             // btnRemover
             // 
-            btnRemover.Location = new Point(442, 51);
+            btnRemover.Location = new Point(505, 68);
+            btnRemover.Margin = new Padding(3, 4, 3, 4);
             btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(75, 23);
+            btnRemover.Size = new Size(86, 31);
             btnRemover.TabIndex = 5;
             btnRemover.Text = "Remover";
             btnRemover.UseVisualStyleBackColor = true;
@@ -98,15 +102,16 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(706, 631);
+            ClientSize = new Size(790, 663);
             Controls.Add(btnRemover);
             Controls.Add(panelCalc);
             Controls.Add(btnGenerate);
             Controls.Add(Estado);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
