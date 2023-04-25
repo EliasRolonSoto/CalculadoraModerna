@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            label1 = new Label();
+            labelResul = new Label();
             Estado = new Label();
             btnGenerate = new Button();
             panelCalc = new Panel();
             btnRemover = new Button();
             btnRemoveOps = new Button();
             btnGenOp = new Button();
+            btnResta = new Button();
+            btnDiv = new Button();
+            btnMult = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(478, 180);
+            button1.Location = new Point(435, 203);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(86, 31);
@@ -49,14 +52,14 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label1
+            // labelResul
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(493, 215);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            labelResul.AutoSize = true;
+            labelResul.Location = new Point(610, 287);
+            labelResul.Name = "labelResul";
+            labelResul.Size = new Size(75, 20);
+            labelResul.TabIndex = 1;
+            labelResul.Text = "Resultado";
             // 
             // Estado
             // 
@@ -122,18 +125,51 @@
             btnGenOp.UseVisualStyleBackColor = true;
             btnGenOp.Click += btnGenOp_Click;
             // 
+            // btnResta
+            // 
+            btnResta.Location = new Point(435, 257);
+            btnResta.Name = "btnResta";
+            btnResta.Size = new Size(86, 29);
+            btnResta.TabIndex = 8;
+            btnResta.Text = "Resta";
+            btnResta.UseVisualStyleBackColor = true;
+            btnResta.Click += btnResta_Click;
+            // 
+            // btnDiv
+            // 
+            btnDiv.Location = new Point(435, 363);
+            btnDiv.Name = "btnDiv";
+            btnDiv.Size = new Size(86, 29);
+            btnDiv.TabIndex = 9;
+            btnDiv.Text = "Division";
+            btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnDiv_Click;
+            // 
+            // btnMult
+            // 
+            btnMult.Location = new Point(435, 311);
+            btnMult.Name = "btnMult";
+            btnMult.Size = new Size(86, 29);
+            btnMult.TabIndex = 10;
+            btnMult.Text = "Mult";
+            btnMult.UseVisualStyleBackColor = true;
+            btnMult.Click += btnMult_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(790, 663);
+            Controls.Add(btnMult);
+            Controls.Add(btnDiv);
+            Controls.Add(btnResta);
             Controls.Add(btnGenOp);
             Controls.Add(btnRemoveOps);
             Controls.Add(btnRemover);
             Controls.Add(panelCalc);
             Controls.Add(btnGenerate);
             Controls.Add(Estado);
-            Controls.Add(label1);
+            Controls.Add(labelResul);
             Controls.Add(button1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
@@ -147,12 +183,15 @@
         #endregion
 
         private Button button1;
-        private Label label1;
+        private Label labelResul;
         private Label Estado;
         private Button btnGenerate;
         private Panel panelCalc;
         private Button btnRemover;
         private Button btnRemoveOps;
         private Button btnGenOp;
+        private Button btnResta;
+        private Button btnDiv;
+        private Button btnMult;
     }
 }
