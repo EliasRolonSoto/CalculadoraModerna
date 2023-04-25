@@ -8,6 +8,8 @@ namespace CalcWinform1
 
         private Queue<Button> botones = new Queue<Button>();
 
+        private Queue<Button> op = new Queue<Button>();
+
         public Form1(ICalc calc)
         {
             _calc = calc;
@@ -22,7 +24,7 @@ namespace CalcWinform1
         private void button1_Click(object sender, EventArgs e)
         {
 
-            var resultado = _calc.Suma(1, 1);
+            var resultado = _calc.Suma(4, 8);
 
             label1.Text = resultado.ToString();
 
@@ -55,14 +57,9 @@ namespace CalcWinform1
                 botones.Enqueue(b);
 
             }
-            var bSuma = new Button();
-            bSuma.Text = "+";
-            var bResta = new Button();
-            bResta.Text = "-";
-            var bMulti = new Button();
-            bMulti.Text = "*";
-            var bDiv = new Button();
-            bDiv.Text = "/";
+
+
+            
         }
 
 
@@ -97,6 +94,44 @@ namespace CalcWinform1
                 panelCalc.Controls.Remove(btnRemover);
             }
 
+        }
+
+        private void btnRemoveOps_Click(object sender, EventArgs e)
+        {
+            if (op.Count > 0)
+            {
+                Button btnRemoveOps = op.Dequeue();
+
+                panelCalc.Controls.Remove(btnRemoveOps);
+            }
+        }
+
+        private void btnGenOp_Click(object sender, EventArgs e)
+        {
+            var bSuma = new Button();
+            bSuma.Text = "+";
+            bSuma.Location = new Point(80, 60);
+            panelCalc.Controls.Add(bSuma);
+
+            var bResta = new Button();
+            bResta.Text = "-";
+            bResta.Location = new Point(80, 40);
+            panelCalc.Controls.Add(bResta);
+
+            var bMulti = new Button();
+            bMulti.Text = "*";
+            bMulti.Location = new Point(80, 20);
+            panelCalc.Controls.Add(bMulti);
+
+            var bDiv = new Button();
+            bDiv.Text = "/";
+            bDiv.Location = new Point(80, 0);
+            panelCalc.Controls.Add(bDiv);
+
+            op.Enqueue(bSuma);
+            op.Enqueue(bResta);
+            op.Enqueue(bMulti);
+            op.Enqueue(bDiv);
         }
     }
 }
